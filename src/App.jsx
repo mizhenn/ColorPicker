@@ -1,8 +1,16 @@
-// Write your Color component here
-const Color = (props) => {
-  return <div className={props.color}></div>
-}
+import { useState } from 'react'
 
+
+// Write your Color component here
+import React, { useState } from 'react';
+const Color = (props) => {
+  return (
+    <div
+      className={props.color}
+      onClick={() => props.onSelect(props.color)} 
+    ></div>
+  );
+};
 const App = () => {
   return (
     <div id="container">
@@ -20,4 +28,6 @@ const App = () => {
 };
 
 export default App;
+
+
 
